@@ -63,7 +63,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement subscribe function in Notification controller.`
     -   [x] Commit: `Implement unsubscribe function in Notification service.`
     -   [x] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -84,5 +84,10 @@ This is the place for you to write reflections:
 **DashMap or Singleton pattern?** -- DashMap handles concurrency internally, so unless there are specific requirements that make Singleton need to be used, then using DashMap is preferable in Rust.
 
 #### Reflection Publisher-2
+**Why Service and Repository needs to be separated from Model?** -- the separation improves the code's maintainability, scalibility, testability, and it follows the fundamental design principles like SRP, SoC, and DRY. The separation allows cleaner code organization, easier maintenance, and better support for evolving requirements in complex software systems.
+
+**What happen if only Model is used?** -- if only model is used, the complexity of each Model (eg: Program, Subscriber, Notification) will increase significantly, the maintainability and modularity will be reduced. Each model will be burdened with mix of domain logic and data access concerns, leading to tangled codes and difficulty in extending or modifying the system. 
+
+**How will Postman help?** -- Postman will help testing out the API endpoints that have been made. It makes the endpoint calling easier so I could see whether my program works as intended or not. The feature I like the most about Postman is the ability to save endpoints as groups so it will be easy to test it, or even automate the endpoint testing.
 
 #### Reflection Publisher-3
