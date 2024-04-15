@@ -69,7 +69,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement notify function in Notification service to notify each Subscriber.`
     -   [x] Commit: `Implement publish function in Program service and Program controller.`
     -   [x] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -91,3 +91,8 @@ This is the place for you to write reflections:
 **How will Postman help?** -- Postman will help testing out the API endpoints that have been made. It makes the endpoint calling easier so I could see whether my program works as intended or not. The feature I like the most about Postman is the ability to save endpoints as groups so it will be easy to test it, or even automate the endpoint testing.
 
 #### Reflection Publisher-3
+**Which variation of pattern is used here?** -- the variation used here is the push pattern. `NotificationService` here acts as the subject, which pushes updates to its observers (Subscribers) when there is a change.
+
+**What's the advantage of the observer pattern in the tutorial?** -- using pull will reduce the overall complexity because the subject don't need to maintain references to its observers. Also, the system will more scalable since observers only request updates when needed, so the subject don't need to push updates to all observers simultaneously.
+
+**What happens if multi-threading isn't used?** -- if multi-threading isn't used, the process of sending notification will be significantly slower when many users are using the application at once. Also, the hardware provided won't be fully utilized as well.
